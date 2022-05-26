@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family:'poppins', sans-serif;
+    color: #FFEFDB;
+}
+body{
+    background:#E5E5E5;
+}
+.page{
+    background-color: #E5E5E5;
+    height: 100vh;
+    text-align: center;
+
+}
+.arrow-back{
+    width:2%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.form{
+    background-image: url(./images/cuerpo.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    padding-top:min(160px, 25vw);
+    margin: 0 auto;
+    width: 90vw;
+    height:600px;
+    max-width:550px;
+}
+.tittle{
+    padding: 5vh;
+    color: #1D1D1B;
+    font-weight: 800;
+}
+
+form input, form textarea{
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
+    outline: none;
+    background: #3C3C3B;
+    font-size: 14px;
+    border-radius: 5px;
+}
+::placeholder{
+  color: #FFEFDB8A;
+}
+
+:-ms-input-placeholder{
+  color: #FFEFDB8A;
+}
+
+::-ms-input-placeholder{
+  color: #FFEFDB8A;
+}
+.textarea{
+    display: block;
+    margin: 0 auto 25px;
+    width: 375px;
+}
+
+.button-img{
+    border-radius: 25%;
+    width: 25vw;
+    max-width: 160px;
+}
+@media screen and (max-width: 500px) {
+    .form{
+        background-image: url(./images/cuerpo-mobile.svg);
+        padding-top: 30vw;
+
+    }
+    .textarea{
+        width: 70%;
+        margin: 5px auto 5vw;
+    }
+    .input{
+        width: 30vw;
+        margin: 0;
+    }
+    .container-input{
+        /* display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-between; */
+        margin: 5px auto;
+    }
+    .button-img{
+        width: 35vw;
+    }
+}

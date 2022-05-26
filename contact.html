@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+
+<body>  
+    <div class="page">
+            <a href="index.html"><img  class="arrow-back"src="./images/back.svg"></a>
+
+        <h2 class="tittle">give me your feedback</h2>
+
+        <form id="my_form" class="form" action="https://formsubmit.co/wiblipedia@gmail.com" method="POST" >
+            
+            <div class="container-inputs">
+                <input type="text" id="name" class="input"
+                placeholder="name"/>
+
+                <input type="email" id="email" class="input"
+                placeholder="email"/>
+            </div>
+
+            <textarea id="message" rows="4" class="textarea"
+            placeholder="message"></textarea>
+            
+            <script src="./contact.js"></script>
+
+            <a class="button" id=btn onclick="validateForm()">
+                
+                <img class="button-img" src="./images/mouth.svg"
+                onmouseover="this.src='./images/mouth2.svg'"
+                onmouseout="this.src='./images/mouth.svg'"/></a>
+            
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+</body>
+</html>

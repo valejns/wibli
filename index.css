@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    background-color:#E5E5E5;
+}
+.nav{
+    background-color: #1D1D1B;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.nav .wibli{
+    width: 13%;
+}
+.nav .wibli, a{
+    background-color: #1D1D1B;
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+}
+.nav a{
+    padding: 1% 3%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+}
+.nav a:hover{
+    color: #1D1D1B;
+    background-color: rgb(179, 174, 174);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.app{
+    padding: 2% 6%;
+    display: grid; 
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 3vw; 
+    grid-row-gap: 3vh;
+    
+}
+ .card{
+    padding: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+ }
+
+
+.card .tittles{
+    text-align: center;
+    font-weight:400;
+    background-color: #fff;
+}
+.card .poster{
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    #app{
+        grid-template-columns: repeat(2,1fr);
+    }   
+}
+@media screen and (min-width: 576px) {
+    #app{
+        grid-template-columns: repeat(3,1fr);
+    }   
+}
+@media screen and (min-width: 768px) {
+    #app{
+        grid-template-columns: repeat(4,1fr);
+    }  
+}
+@media screen and (min-width: 992px) {
+    #app{
+        grid-template-columns: repeat(5,1fr);
+    }  
+}
+@media screen and (min-width: 1200px) {
+    #app{
+        grid-template-columns: repeat(6,1fr);
+    }  
+}
