@@ -8,18 +8,26 @@ function validateForm(){
     var regexName= /^[a-zA-Z]{3,}$/;
 
     let errorNameInput = regexName.test(nameInput.value)?
-    null : '¿Estas seguro de que ingresaste bien el nombre?'
+    false : '¿Estas seguro de que ingresaste bien el nombre?'
 
     let errorEmailInput = (regexEmail.test(emailInput.value)) ?
-    null : '¿Estas seguro de que ingresaste bien el mail?'
+    false : '¿Estas seguro de que ingresaste bien el mail?'
 
     let errorMessageInput = (messageInput.value.length >0) ?
-    null : 'Ingresa un mensaje'
+    false : 'Ingresa un mensaje'
 
-    if (errorEmailInput){
-        console.log("ta mal")
+    if(errorNameInput && errorEmailInput && errorMessageInput == false){
+        console.log("q pasa aca");
+        // document.getElementById("#myForm").submit();
+    }            
+    
+    // else if(errorNameInput && errorEmailInput && errorMessageInput){
+    //     <div class="cartel">
+    //         <div class="error">holi</div>
+    //         <img class="hands" src="./images/hands.svg"/>
+    //     </div>
 
-    }
+    // }
 
     }
 
