@@ -17,6 +17,8 @@
         <h2 class="tittle">give me your feedback</h2>
 
         <form id="myForm" class="form" action="https://formsubmit.co/wiblipedia@gmail.com" method="POST" >
+            <div class="cartel" id="cartel"></div>
+
             <div class="container-inputs">
                 <input type="text" id="name" class="input"
                 placeholder="name"/>
@@ -27,16 +29,15 @@
 
             <textarea id="message" rows="4" class="textarea"
             placeholder="message"></textarea>
-            
-            <script src="./contact.js"></script>
-            <a class="button" id=btn onclick="validateForm()"></a>
-                
+    
+            <a class="button" id=btn onclick="validateForm()">
                 <img class="button-img" src="./images/mouth.svg"
                 onmouseover="this.src='./images/mouth2.svg'"
                 onmouseout="this.src='./images/mouth.svg'"/></a>
             
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
             <input type="hidden" name="_captcha" value="false">
+            <script src="./contact.js"></script>
         </form>
     </div>
 </body>
