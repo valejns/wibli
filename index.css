@@ -83,3 +83,13 @@
         grid-template-columns: repeat(6,1fr);
     }  
 }
+
+footer{
+    background-color: #1D1D1B;
+    text-align: center;
+    padding: 10px;
+
+}
+footer .socialMedias{
+    width: 5vh;
+}
