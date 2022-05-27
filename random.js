@@ -8,7 +8,6 @@ function obtenerPeliculas(){
              movies= JSON.parse(this.response)
     }
 }
-
 request.addEventListener("load", obtenerPeliculas);
 request.open('GET',`${API_URL}/films`);
 request.send();
@@ -16,15 +15,18 @@ request.send();
 function obtenerRandom(){
     const randomMovie = movies[Math.floor(Math.random() * movies.length)];
     const html = document.querySelector('#rdm')
-        html.innerHTML= `<h2 class="title">${randomMovie.title}</h2>
+        html.innerHTML= `<div class="movie">
+        <div>
+        <h2 class="title">${randomMovie.title}</h2>
+        <p class="text">${randomMovie.release_date}</p>
+        </div>
+        <div>
         <p class="originalTitle">${randomMovie.original_title}</p>
-        <img class="poster" src="${randomMovie.image}" width="10%" />
-        <p class="description">${randomMovie.description}</p>
-        <p class="producer">${randomMovie.producer}</p>
-        <p class="title">${randomMovie.director}</p>
-        <p class="title">${randomMovie.release_date}</p>
-        <p class="title">${randomMovie.running_time}</p>
-        <p class="title">${randomMovie.rt_score}</p>
+        <p class="text">${randomMovie.director}</p>
+        </div>
         
+        <img class="poster" src="${randomMovie.image}"/>
+        <p class="description">${randomMovie.description}</p>
+        </div>
         `
 }

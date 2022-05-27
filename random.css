@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family:'poppins', sans-serif;
+    background:#E5E5E5;
+
+}
+.page{
+    background-color: #E5E5E5;
+    height: 100vh;
+    text-align: center;
+}
+.arrow-back{
+    width:2%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.random{
+    padding: 5vh;
+    color: #1D1D1B;
+    font-weight: 800;
+}
+.movie{
+    margin: 5%;
+}
+.poster{
+    width: 15%;
+}
