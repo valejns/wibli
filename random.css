@@ -17,14 +17,35 @@
     top: 10px;
     left: 20px;
 }
+.title{
+    padding: 5vh;
+    color: #1D1D1B;
+    font-weight: 800;
+}
+
 .random{
     padding: 5vh;
     color: #1D1D1B;
     font-weight: 800;
 }
 .movie{
-    margin: 5%;
+}
+.movieTitle{
+    margin-right: 10px;
+}
+.originalTitle{
+    margin-right: 10px;
 }
 .poster{
-    width: 15%;
+    width: 20%;
+}
+
+.boxes{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+.description{
+    margin-left: 10px;
+    text-align: left;
 }
