@@ -14,17 +14,24 @@
 <body>
     <div class="page">
 
-    <a href="index.html"><img  class="arrow-back"src="./images/back.svg"></a>
+        <a href="index.html"><img  class="arrow-back"src="./images/back.svg"></a>
 
-    <h2 class="title">get a random movie</h2>
+        <h1 class="titlePage">get a random movie</h1>
 
-    <div class="rdm" id="rdm">
-        <script src="./random.js"></script>
-    </div>
-    <button class="btn" onclick="obtenerRandom()">
-        <img src="./images/head.svg">
-        <img src="./images/body.svg">
-    </button>
+        <div class="movieData" id="rdm">
+            <script src="./random.js"></script>
+        </div>
+
+        <div class="kodama-button">
+            <div class="kodama" >
+                <div class="kodama-head">
+                    <img id="cabezon" class="head" src="./images/head.svg" onclick="obtenerRandom()">
+                </div>
+                <div class="kodama-body">
+                    <img class="body" src="./images/body.svg" onclick="obtenerRandom()"> 
+                </div>
+            </div>  
+        </div>
     </div>
 </div>
 </body>

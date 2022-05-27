@@ -1,11 +1,11 @@
-*{
+html, body{
     margin: 0;
     padding: 0;
-    box-sizing:border-box ;
+  
     font-family:'poppins', sans-serif;
-    background:#E5E5E5;
 
 }
+
 .page{
     background-color: #E5E5E5;
     height: 100vh;
@@ -17,35 +17,223 @@
     top: 10px;
     left: 20px;
 }
-.title{
-    padding: 5vh;
+.movieData{
+    position: relative;
+}
+.titlePage{
+    padding-top: 5vh;
     color: #1D1D1B;
     font-weight: 800;
+    font-size: 25px;
+   
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 60px;
+}
+
+.movie{
+    display: flex;
+    height: 300px;
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* border: 5px solid red; */
+
+}
+
+.left{
+    /* border: 5px solid green; */
+    display: inline-block;
+    width: 200px;
+}
+.poster{
+    width: 200px;
+}
+
+.right{
+    padding-left: 10px;
+    text-align: left;
+    /* border: 5px solid green; */
+    display: inline-block;
+    
 }
 
 .random{
     padding: 5vh;
     color: #1D1D1B;
     font-weight: 800;
-}
-.movie{
-}
-.movieTitle{
-    margin-right: 10px;
-}
-.originalTitle{
-    margin-right: 10px;
-}
-.poster{
-    width: 20%;
+   
 }
 
-.boxes{
-    display: flex;
-    width: 60%;
-    justify-content: center;
+.title{
+    /* border: 5px solid orange; */
+    font-size: 16px;
+}
+.title > span{
+    font-size: 13px;
+}
+.title-original{
+    /* border: 5px solid orange; */
+    font-size: 14px;
+}
+.title-original > span{
+    margin-left: 10px;
+    color: #474747;
 }
 .description{
-    margin-left: 10px;
-    text-align: left;
+    /* border: 5px solid orange; */
+    font-size: 12px;
 }
+.kodama-button{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.kodama{
+    position: relative;
+    height: 200px;
+}
+
+.kodama-head{
+    position: absolute;
+    z-index: 110;
+    left: 0;
+    right: 0;
+    width: 60px;
+    margin: 0 auto;
+}
+.kodama-body{
+    position: absolute; 
+    z-index: 100;
+    left: 19px;
+    right: 0;
+    top: -19px;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.body{
+    width: 100%;
+
+}
+.body:hover{
+    cursor: pointer;
+}
+
+.head{
+    overflow: hidden;
+    transition-duration: 1.2s;
+    transition-property: transform;
+    width: 100%;
+}
+.head:hover{
+    -webkit-animation: rotate 1.2s normal linear infinite;
+    animation: rotate 10s normal linear infinite;
+    cursor: pointer;
+    width: 100%;
+}
+
+@keyframes rotate {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    2%, 100% {
+      -webkit-transform: rotate3d(0, 0, 1, 40deg);
+      transform: rotate3d(0, 0, 1, 40deg);
+    }
+  }
+
+
+.head-clicked{
+    width: 100%;
+    overflow: hidden;
+    transition-duration: 1.2s;
+    transition-property: transform;
+    background-color: #ffffff00;
+    -webkit-animation: rotateOnClick 1.2s normal linear infinite;
+    animation: rotateOnClick 0.5s normal linear infinite;
+}
+
+@keyframes rotateOnClick {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 40deg);
+    }
+    2% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 30deg);
+      }
+    10% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 80deg);
+      }
+      20% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 60deg);
+      }
+
+    95% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 400deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 360deg);
+      }
+  }
+  .image-cropper {
+   
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+  }
+  /* breakpoints */
+   @media screen and (max-width: 576px) {
+    .kodama{    height: 160px;}
+    .kodama-head{width: 60px}
+    .kodama-body{width: 130px}
+    .left{display: none;}
+    .kodama-button{ bottom: 0}
+    .image-cropper {display: none}
+    .right{text-align: center;}
+    .titlePage{margin-bottom: 0; font-size: 16px;}
+    .title{font-size: 13px;}
+    .title-original{font-size: 12px;}
+}
+@media screen and (min-width: 576px) {
+    .kodama-head{width: 60px}
+    .kodama-body{width: 130px}
+    .kodama-button{ bottom: 0}
+    .kodama{    height: 160px;}
+
+}
+@media screen and (min-width: 768px) {
+    .kodama-head{width: 60px}
+    .kodama-body{width: 130px}
+    .kodama-button{ bottom: 0}
+    .kodama{    height: 160px;}
+}
+@media screen and (min-width: 992px) {
+    .kodama-head{width: 80px}
+    .kodama-body{width: 163px}
+    .kodama{    height: 190px;}
+}
+@media screen and (min-width: 1200px) {
+    .kodama-head{width: 80px}
+    .kodama-body{width: 163px}
+    .kodama{    height: 205px;}
+} 
+

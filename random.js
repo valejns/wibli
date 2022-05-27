@@ -16,6 +16,7 @@ function obtenerRandom(){
     const randomMovie = movies[Math.floor(Math.random() * movies.length)];
     const html = document.querySelector('#rdm')
         html.innerHTML= `<div class="movie">
+        
         <div class="boxes">
         <h2 class="movieTitle">${randomMovie.title}</h2>
         <p class="text">${randomMovie.release_date}</p>

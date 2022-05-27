@@ -82,9 +82,13 @@ form input, form textarea{
 .textarea{
     display: block;
     margin: 0 auto 25px;
+    resize: none;
     width: 375px;
+    height: 100px;
 }
-
+.button:hover{
+    cursor: pointer;
+}
 .button-img{
     border-radius: 25%;
     width: 25vw;
