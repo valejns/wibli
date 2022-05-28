@@ -38,13 +38,16 @@
     color: #1D1D1B;
     font-weight: 800;
 }
-.app{
+.showApp{
     padding: 2% 6%;
     display: grid; 
     grid-template-columns: repeat(5,1fr);
     grid-column-gap: 3vw; 
     grid-row-gap: 3vh;
-    
+}
+
+.hideApp{
+    display:none
 }
 .card {
     padding: 10px;
@@ -65,7 +68,7 @@
 } 
 
 @media screen and (max-width: 576px) {
-    #app{
+    #showApp{
         grid-template-columns: repeat(2,1fr);
     }
     .title{
@@ -73,22 +76,22 @@
     }   
 }
 @media screen and (min-width: 576px) {
-    #app{
+    #showApp{
         grid-template-columns: repeat(3,1fr);
     }   
 }
 @media screen and (min-width: 768px) {
-    #app{
+    #showApp{
         grid-template-columns: repeat(4,1fr);
     }  
 }
 @media screen and (min-width: 992px) {
-    #app{
+    #showApp{
         grid-template-columns: repeat(5,1fr);
     }  
 }
 @media screen and (min-width: 1200px) {
-    #app{
+    #showApp{
         grid-template-columns: repeat(6,1fr);
     }  
 }
