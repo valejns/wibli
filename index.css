@@ -32,6 +32,12 @@
     text-decoration: none;
     border-radius: 10px;
 }
+.title{
+    padding: 3vh;
+    text-align: center;
+    color: #1D1D1B;
+    font-weight: 800;
+}
 .app{
     padding: 2% 6%;
     display: grid; 
@@ -61,6 +67,9 @@
 @media screen and (max-width: 576px) {
     #app{
         grid-template-columns: repeat(2,1fr);
+    }
+    .title{
+        font-size: la;
     }   
 }
 @media screen and (min-width: 576px) {
@@ -87,10 +96,16 @@
 footer{
     background-color: #1D1D1B;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 
 }
 footer .socialMedias{
-    width: 5vh;
+    margin: 0 10px;
+    padding: 5px;
+    width: 6vh;
     background-color:#ffffff00
+}
+footer .socialMedias:hover{
+    border-radius: 5px;
+    background-color: #918b8b;
 }
