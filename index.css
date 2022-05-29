@@ -12,7 +12,7 @@
     align-items: center;
 }
 .nav .wibli{
-    width: 13%;
+    width: 12%;
 }
 .nav .wibli ,.option{
     background-color: #1D1D1B;
@@ -27,9 +27,14 @@
 }
 .nav .option:hover{
     color: #1D1D1B;
-    background-color: rgb(179, 174, 174);
+    background-color: #b3aeae;
     text-decoration: none;
     border-radius: 10px;
+}
+.spotify{
+    width: 80px;
+    height: 80px;
+    border-radius:12px;
 }
 .pageTitle{
     padding: 3vh;
@@ -60,17 +65,24 @@
 @media screen and (max-width: 576px) {
     #movies{
         grid-template-columns: repeat(2,1fr);
-    }   
+    } 
+    .left{display: none;}
+    .right{text-align: center;}
+    .titlePage{margin-bottom: 0; font-size: 16px;}
+    .title{font-size: 13px;}
+    .title-original{font-size: 12px;}
+    .spotify {display: none;}
+
 }
 @media screen and (min-width: 576px) {
     #movies{
         grid-template-columns: repeat(3,1fr);
-    }   
+    }
 }
 @media screen and (min-width: 768px) {
     #movies{
         grid-template-columns: repeat(4,1fr);
-    }  
+    }
 }
 @media screen and (min-width: 992px) {
     #movies{
@@ -95,9 +107,9 @@
     display:none
 }
 .arrow-back{
-    width: 2%;
+    width: 1.5%;
     margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 10%;
 
 }
 .movie{
@@ -135,37 +147,43 @@
     font-size: 13px;
 }
 .title-original{
+    padding-top: 5px;
     font-size: 14px;
 }
 .title-original > span{
+    padding-top: 5px;
     margin-left: 10px;
     color: #474747;
 }
 .description{
-    font-size: 12px;
+    padding-top: 5px;
+    font-size: 15px;
 }
- /* breakpoints */
- @media screen and (max-width: 576px) {
-    .left{display: none;}
-    .right{text-align: center;}
-    .titlePage{margin-bottom: 0; font-size: 16px;}
-    .title{font-size: 13px;}
-    .title-original{font-size: 12px;}
-}
+
 
 footer{
     background-color: #1D1D1B;
     text-align: center;
-    padding: 5px;
-
+    padding:5px;
+}
+.-absolute{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #1D1D1B;
+    text-align: center;
+    padding:5px;
+}
+a{
+    background-color: #1d1d1b00;
 }
 .socialMedias{
     margin: 0 10px;
     padding: 5px;
     width: 6vh;
-    background-color:#ffffff00; 
+    background-color: #1D1D1B;
 }
 .socialMedias:hover{
     border-radius: 5px;
-    background-color: #918b8b;
+    background-color: #b3aeae;
 }

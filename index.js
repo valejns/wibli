@@ -28,6 +28,7 @@ request.send();
 function hide(id){
     document.getElementById('movies').setAttribute('class', 'movies -hidden')
     document.getElementById('title').setAttribute('class', 'pageTitle -hidden')
+    document.getElementById('footer').setAttribute('class', 'footer -absolute')
     document.getElementById('movie').setAttribute('class', 'movie -showed')
     console.log(id)
     fetch(`https://ghibliapi.herokuapp.com/films/${id}`)
@@ -54,6 +55,7 @@ function hide(id){
 function show(){
     document.getElementById('movies').setAttribute('class', 'movies -showed')
     document.getElementById('title').setAttribute('class', 'pageTitle -showed')
+    document.getElementById('footer').setAttribute('class', 'footer')
     document.getElementById('movie').setAttribute('class', 'movie -hidden')
     const html = document.querySelector('#movie')
     html.innerHTML = ''
