@@ -49,7 +49,10 @@
     filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
  }
  .card:hover{
-     cursor: pointer;
+    cursor: pointer;
+    transition: all .2s ease;
+    transition-duration: 300ms;
+    transform: scale(1.02);
  }
 
 .card .titles{
@@ -110,8 +113,9 @@
     width: 1.5%;
     margin-top: 10px;
     margin-left: 10%;
-
+    cursor: pointer;
 }
+
 .movie{
     position: relative;
 }
