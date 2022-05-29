@@ -10,7 +10,8 @@ body{
     text-align: center;
 }
 .arrow-back{
-    width:2%;
+    width: 1.5%;
+    min-width: 20px;
     position: absolute;
     top: 10px;
     left: 20px;
