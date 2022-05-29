@@ -10,21 +10,28 @@ function obtenerPeliculas(){
     const html = document.querySelector('#app')
     const movie = movies.map (films=>
          (` 
-            <div class="card" onclick="hide()">
+            <div class="card" onclick="hide(); show()">
             <img class="poster" src="${films.image}"/>
-            <p class="tittles">${films.title}</p>
-            <p class="tittles">${films.original_title}</p>
+            <p class="titles">${films.title}</p>
+            <p class="titles">${films.original_title}</p>
             </div>`
          )).join('')
 
     html.innerHTML =`${movie}`
 }
 }
-function hide(){
-    document.getElementById('app').setAttribute('class', 'hideApp')
-}
 
 request.addEventListener("load", obtenerPeliculas);
 request.open('GET', `${API_URL}/films`);
 request.send();
+
+
+function hide(){
+    document.getElementById('app').setAttribute('class', 'hiddenApp')
+}
+function show(){
+     document.getElementById('hidden').setAttribute('class', 'showDescrip')
+}
+
+
 

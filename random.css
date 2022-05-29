@@ -126,7 +126,7 @@ html, body{
 .head{
     overflow: hidden;
     transition-duration: 1.2s;
-    transition-property: transform;
+    transition-property: transform ;
     width: 100%;
 }
 .head:hover{

@@ -5,6 +5,8 @@
     font-family: 'poppins', sans-serif;
     background-color:#E5E5E5;
 }
+
+
 .nav{
     background-color: #1D1D1B;
     display: flex;
@@ -18,7 +20,6 @@
     background-color: #1D1D1B;
     margin-top: 7px;
     margin-bottom: 7px;
-
 }
 .nav a{
     padding: 1% 3%;
@@ -38,30 +39,22 @@
     color: #1D1D1B;
     font-weight: 800;
 }
-.showApp{
-    padding: 2% 6%;
-    display: grid; 
-    grid-template-columns: repeat(5,1fr);
-    grid-column-gap: 3vw; 
-    grid-row-gap: 3vh;
-}
-
-.hideApp{
-    display:none
-}
 .card {
     padding: 10px;
     background-color:#fff;
     border-radius: 10px;
     filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
  }
+ .card:hover{
+     cursor: pointer;
+ }
 
-
-.card .tittles{
+.card .titles{
     text-align: center;
     font-weight:400;
     background-color: #fff;
 }
+
 .card .poster{
     width: 100%;
     border-radius: 5px;
@@ -70,9 +63,6 @@
 @media screen and (max-width: 576px) {
     #showApp{
         grid-template-columns: repeat(2,1fr);
-    }
-    .title{
-        font-size: la;
     }   
 }
 @media screen and (min-width: 576px) {
@@ -95,6 +85,27 @@
         grid-template-columns: repeat(6,1fr);
     }  
 }
+.showApp{
+    padding: 2% 6%;
+    display: grid; 
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 3vw; 
+    grid-row-gap: 3vh;
+}
+
+.hiddenApp{
+    display:none
+}
+.showDescrip{
+    background-color: #E5E5E5;
+    height: 100vh;
+}
+
+.arrow-back{
+    padding-left: 15px;
+    width:2.5%;
+}
+
 
 footer{
     background-color: #1D1D1B;
