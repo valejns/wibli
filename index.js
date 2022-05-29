@@ -7,10 +7,10 @@ const request= new XMLHttpRequest();
 function obtenerPeliculas(){
     if (this.readyState === 4 && this.status === 200){
     const movies = JSON.parse(this.response)
-    const html = document.querySelector('#app')
+    const html = document.querySelector('#movies')
     const movie = movies.map (films=>
          (` 
-            <div class="card" onclick="hide(); show()">
+            <div class="card" onclick="hide()">
             <img class="poster" src="${films.image}"/>
             <p class="titles">${films.title}</p>
             <p class="titles">${films.original_title}</p>
@@ -27,11 +27,14 @@ request.send();
 
 
 function hide(){
-    document.getElementById('app').setAttribute('class', 'hiddenApp')
-}
+    document.getElementById('movies').setAttribute('class', 'movies -hidden')
+    document.getElementById('movie').setAttribute('class', 'movie -showed')
+
+}   
 function show(){
-     document.getElementById('hidden').setAttribute('class', 'showDescrip')
+    document.getElementById('movies').setAttribute('class', 'movies -showed')
+    document.getElementById('movie').setAttribute('class', 'movie -hidden')
 }
 
-
+  
 
